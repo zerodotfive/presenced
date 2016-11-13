@@ -1,0 +1,11 @@
+[template]
+prefix = "/skydns/local/sky"
+src = "service1.tmpl"
+dest = "/etc/nginx/service1.conf"
+owner = "www-data"
+mode = "0644"
+keys = [
+  "/service1",
+]
+check_cmd = "/usr/sbin/nginx -t"
+reload_cmd = "/usr/sbin/nginx -s reload"

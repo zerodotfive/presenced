@@ -1,0 +1,14 @@
+[Unit]
+Description=presenced daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/presenced -c /etc/presenced.conf
+Restart=always
+RestartSec=5
+User=presenced
+Group=presenced
+
+[Install]
+WantedBy=multi-user.target
